@@ -243,6 +243,8 @@ This project is a labor of love, and I’m excited to see how the community shap
 
 This fork also includes ports of **Kintsugi Dark Flared** for Neovim, opencode, and Ghostty.
 
+The screenshots above use the README's advanced polish settings, especially font weight and icon styling. The terminal/editor ports bias the palette warmer and brighter to match that look, but final contrast still depends on your terminal, font, and icon setup.
+
 - **Neovim:** copy `ports/neovim/colors/kintsugi-flared.lua` into a directory on your `runtimepath`, then use `:colorscheme kintsugi-flared`.
 - **LazyVim:** add this fork as a lazy.nvim plugin and set the LazyVim colorscheme to `kintsugi-flared`:
 

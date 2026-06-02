@@ -14,20 +14,20 @@ local c = {
   bg_element = "#292928",
   bg_highlight = "#1d1d1c",
   border = "#2a2a28",
-  fg = "#dddddd",
-  fg_soft = "#c9c4b8",
+  fg = "#e6d6b8",
+  fg_soft = "#d4c7ad",
   fg_muted = "#75715e",
-  syntax = "#BCAC8F",
+  syntax = "#d2bc91",
   comment = "#5f5f5f",
   punctuation = "#7f7b66",
-  keyword = "#D66848",
-  storage = "#DBAD49",
-  operator = "#E08542",
-  string = "#cc7f66",
-  number = "#DB9833",
-  symbol = "#798283",
-  attribute = "#678E87",
-  pointer = "#EBA96C",
+  keyword = "#ee7653",
+  storage = "#f0bc4a",
+  operator = "#f2994a",
+  string = "#df8f6f",
+  number = "#e0a344",
+  symbol = "#8d9a98",
+  attribute = "#78a39b",
+  pointer = "#f0b47a",
   accent = "#b8943a",
   cursor = "#d4a943",
   blue = "#6c7a8a",
@@ -132,9 +132,17 @@ hi("@comment", { fg = c.comment })
 hi("@punctuation", { fg = c.punctuation })
 hi("@punctuation.bracket", { fg = c.punctuation })
 hi("@punctuation.delimiter", { fg = c.punctuation })
-hi("@keyword", { fg = c.keyword, bold = true })
-hi("@keyword.function", { fg = c.keyword, bold = true })
+hi("@keyword", { fg = c.storage, bold = true })
+hi("@keyword.conditional", { fg = c.keyword, bold = true })
+hi("@keyword.coroutine", { fg = c.keyword, bold = true })
+hi("@keyword.exception", { fg = c.keyword, bold = true })
+hi("@keyword.function", { fg = c.storage, bold = true })
+hi("@keyword.import", { fg = c.keyword, bold = true })
+hi("@keyword.modifier", { fg = c.storage, bold = true })
 hi("@keyword.operator", { fg = c.operator })
+hi("@keyword.repeat", { fg = c.keyword, bold = true })
+hi("@keyword.return", { fg = c.keyword, bold = true })
+hi("@keyword.storage", { fg = c.storage, bold = true })
 hi("@operator", { fg = c.operator })
 hi("@string", { fg = c.string })
 hi("@string.escape", { fg = c.symbol })
@@ -158,6 +166,15 @@ hi("@attribute", { fg = c.attribute })
 hi("@markup.heading", { fg = c.storage, bold = true })
 hi("@markup.link", { fg = c.symbol })
 hi("@markup.raw", { fg = c.string })
+
+hi("NeoTreeDirectoryIcon", { fg = c.storage })
+hi("NeoTreeDirectoryName", { fg = c.storage, bold = true })
+hi("NeoTreeFileName", { fg = c.fg_soft })
+hi("NeoTreeFileNameOpened", { fg = c.fg, bold = true })
+hi("NvimTreeFolderIcon", { fg = c.storage })
+hi("NvimTreeFolderName", { fg = c.storage, bold = true })
+hi("NvimTreeFileIcon", { fg = c.fg_soft })
+hi("NvimTreeNormal", { fg = c.fg_soft, bg = c.bg_dark })
 
 vim.g.terminal_color_0 = c.bg_dark
 vim.g.terminal_color_1 = c.red
