@@ -241,7 +241,7 @@ This project is a labor of love, and I’m excited to see how the community shap
 
 ## Flared Ports
 
-This fork also includes ports of **Kintsugi Dark Flared** for Neovim, opencode, and Ghostty.
+This fork also includes ports of **Kintsugi Dark Flared** for Neovim, opencode, Ghostty, and LazyGit.
 
 The screenshots above use the README's advanced polish settings, especially font weight and icon styling. The terminal/editor ports bias the palette warmer and brighter to match that look, but final contrast still depends on your terminal, font, and icon setup.
 
@@ -266,6 +266,7 @@ return {
 
 - **opencode:** copy `.opencode/themes/kintsugi-flared.json` to `~/.config/opencode/themes/kintsugi-flared.json` or keep it in this project and select `kintsugi-flared` with `/theme`.
 - **Ghostty:** copy `ports/ghostty/kintsugi-flared` into your Ghostty themes directory and set `theme = kintsugi-flared`.
+- **LazyGit:** merge `ports/lazygit/kintsugi-flared.yml` into `~/Library/Application Support/lazygit/config.yml` on macOS or `~/.config/lazygit/config.yml` on Linux.
 
 ## Acknowledgements
 
