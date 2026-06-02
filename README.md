@@ -239,6 +239,32 @@ This project is a labor of love, and I’m excited to see how the community shap
 3. Click **Install**.
 4. Go to `Code > Preferences > Color Theme` and select **Kintsugi Dark** or **Kintsugi Dark Flared**.
 
+## Flared Ports
+
+This fork also includes ports of **Kintsugi Dark Flared** for Neovim, opencode, and Ghostty.
+
+- **Neovim:** copy `ports/neovim/colors/kintsugi-flared.lua` into a directory on your `runtimepath`, then use `:colorscheme kintsugi-flared`.
+- **LazyVim:** add this fork as a lazy.nvim plugin and set the LazyVim colorscheme to `kintsugi-flared`:
+
+```lua
+return {
+  {
+    "carleom/multi-kintsugi",
+    lazy = false,
+    priority = 1000,
+  },
+  {
+    "LazyVim/LazyVim",
+    opts = {
+      colorscheme = "kintsugi-flared",
+    },
+  },
+}
+```
+
+- **opencode:** copy `.opencode/themes/kintsugi-flared.json` to `~/.config/opencode/themes/kintsugi-flared.json` or keep it in this project and select `kintsugi-flared` with `/theme`.
+- **Ghostty:** copy `ports/ghostty/kintsugi-flared` into your Ghostty themes directory and set `theme = kintsugi-flared`.
+
 ## Acknowledgements
 
 Kintsugi was built with inspiration from exceptional themes:
