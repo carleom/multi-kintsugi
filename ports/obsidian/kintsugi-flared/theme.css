@@ -1,0 +1,186 @@
+/*
+Kintsugi Flared for Obsidian
+Inspired by the Kintsugi Dark Flared VS Code theme and tuned with the warmer ports palette.
+*/
+
+.theme-dark {
+  --background-primary: #161618;
+  --background-primary-alt: #1d1d1c;
+  --background-secondary: #131314;
+  --background-secondary-alt: #20201f;
+  --background-modifier-border: #2a2a28;
+  --background-modifier-border-hover: #3a372d;
+  --background-modifier-border-focus: #d4a943;
+  --background-modifier-form-field: #20201f;
+  --background-modifier-form-field-highlighted: #2f2b24;
+  --background-modifier-hover: #2a2a2850;
+  --background-modifier-active-hover: #393b31;
+  --background-modifier-selected: #2f2b24;
+  --background-modifier-error: #b38f8f20;
+  --background-modifier-error-hover: #b38f8f30;
+  --background-modifier-success: #a3be8c20;
+  --background-modifier-message: #211f1d;
+
+  --text-normal: #d4c7ad;
+  --text-muted: #969b8c;
+  --text-faint: #75715e;
+  --text-accent: #f0bc4a;
+  --text-accent-hover: #ffd06a;
+  --text-on-accent: #131314;
+  --text-error: #c89484;
+  --text-error-hover: #df9f8f;
+  --text-success: #a3be8c;
+  --text-selection: #4a4030;
+  --text-highlight-bg: #f0bc4a30;
+  --text-highlight-bg-active: #ee765340;
+
+  --interactive-normal: #20201f;
+  --interactive-hover: #2f2b24;
+  --interactive-accent: #d4a943;
+  --interactive-accent-hover: #f0bc4a;
+  --interactive-success: #a3be8c;
+
+  --scrollbar-bg: #13131400;
+  --scrollbar-thumb-bg: #33352d90;
+  --scrollbar-active-thumb-bg: #b8943a80;
+
+  --h1-color: #f0bc4a;
+  --h2-color: #e0a344;
+  --h3-color: #ee7653;
+  --h4-color: #df8f6f;
+  --h5-color: #8d9a98;
+  --h6-color: #d2bc91;
+  --heading-formatting: #7f7b66;
+
+  --link-color: #8fa3b3;
+  --link-color-hover: #9fc0d8;
+  --link-external-color: #8d9a98;
+  --link-external-color-hover: #a1b5b2;
+  --tag-color: #f0bc4a;
+  --tag-background: #2f2b24;
+  --tag-background-hover: #4a4030;
+
+  --code-normal: #d2bc91;
+  --code-comment: #5f5f5f;
+  --code-function: #8d9a98;
+  --code-important: #ee7653;
+  --code-keyword: #ee7653;
+  --code-operator: #f2994a;
+  --code-property: #8d9a98;
+  --code-punctuation: #7f7b66;
+  --code-string: #df8f6f;
+  --code-tag: #f0bc4a;
+  --code-value: #e0a344;
+  --code-background: #131314;
+  --code-border: #2a2a28;
+
+  --blockquote-border-color: #d4a943;
+  --blockquote-color: #c9c4b8;
+  --callout-border-width: 1px;
+  --callout-title-color: #f0bc4a;
+  --table-header-background: #20201f;
+  --table-header-background-hover: #2f2b24;
+  --table-row-background-hover: #20201f;
+  --table-border-color: #2a2a28;
+  --hr-color: #2a2a28;
+  --checkbox-color: #d4a943;
+  --checkbox-color-hover: #f0bc4a;
+  --checkbox-marker-color: #131314;
+  --caret-color: #d4a943;
+}
+
+.theme-light {
+  --background-primary: #f8f4ea;
+  --background-primary-alt: #eee6d0;
+  --background-secondary: #f2ede4;
+  --background-secondary-alt: #ebe4d8;
+  --background-modifier-border: #ddd4c0;
+  --background-modifier-border-hover: #c8c0a0;
+  --background-modifier-border-focus: #9a7820;
+  --background-modifier-selected: #d8d4c4;
+  --background-modifier-hover: #ddd4c050;
+
+  --text-normal: #3a3828;
+  --text-muted: #605e50;
+  --text-faint: #8a8878;
+  --text-accent: #9a7820;
+  --text-accent-hover: #7f5f16;
+  --text-on-accent: #f8f4ea;
+  --text-error: #8a5050;
+  --text-success: #5a8a40;
+  --text-selection: #d8d0b8;
+  --text-highlight-bg: #9a782030;
+
+  --interactive-normal: #eee8dc;
+  --interactive-hover: #ddd4c0;
+  --interactive-accent: #9a7820;
+  --interactive-accent-hover: #7f5f16;
+
+  --h1-color: #9a7820;
+  --h2-color: #a56b28;
+  --h3-color: #b55d3f;
+  --h4-color: #9d6048;
+  --h5-color: #5f7470;
+  --h6-color: #66573d;
+  --heading-formatting: #8a8878;
+
+  --link-color: #5a6870;
+  --link-color-hover: #45525a;
+  --tag-color: #9a7820;
+  --tag-background: #e6dfd4;
+  --tag-background-hover: #d8d4c4;
+
+  --code-normal: #66573d;
+  --code-comment: #8a8878;
+  --code-function: #5f7470;
+  --code-important: #b55d3f;
+  --code-keyword: #b55d3f;
+  --code-operator: #a56b28;
+  --code-property: #5f7470;
+  --code-punctuation: #8a8468;
+  --code-string: #9d6048;
+  --code-tag: #9a7820;
+  --code-value: #a56b28;
+  --code-background: #f2ede4;
+  --code-border: #ddd4c0;
+}
+
+body {
+  --radius-s: 4px;
+  --radius-m: 6px;
+  --radius-l: 10px;
+  --font-text-theme: var(--font-interface);
+  --font-monospace-theme: "IoskeleyMonoTerm Nerd Font", "IosevkaTerm Nerd Font", monospace;
+}
+
+.workspace-tab-header.is-active,
+.workspace-tab-header.is-active .workspace-tab-header-inner {
+  color: var(--text-normal);
+}
+
+.nav-folder-title,
+.tree-item-self {
+  color: var(--text-muted);
+}
+
+.nav-folder-title.is-active,
+.tree-item-self.is-active,
+.nav-file-title.is-active {
+  color: var(--text-normal);
+  background-color: var(--background-modifier-selected);
+}
+
+.markdown-preview-view blockquote,
+.cm-quote {
+  background-color: color-mix(in srgb, var(--background-secondary-alt) 65%, transparent);
+}
+
+.markdown-rendered code,
+.cm-inline-code {
+  border: 1px solid var(--code-border);
+}
+
+.markdown-rendered pre,
+.HyperMD-codeblock {
+  border: 1px solid var(--code-border);
+}
