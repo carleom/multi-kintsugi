@@ -6,6 +6,20 @@ The format is based on [Keep a Changelog](https://keepachangelog.com/en/1.0.0/).
 
 ## [Unreleased]
 
+### Added
+
+- A shared Dark Flared semantic palette, port synchronizer, cross-app comparison fixtures, and automated consistency checks.
+- Oh My Pi port of Kintsugi Dark Flared with VS Code syntax, Markdown, and diff colors.
+- A terminal-native Oh My Pi palette preview with real composer, context-gauge, edit, and bash gallery scenarios (`python3 ports/oh-my-pi/preview.py`).
+
+### Changed
+
+- Unified Markdown headings, strong text where supported, inline code, links, lists, and user-type colors across Flared ports while preserving original VS Code syntax.
+- Restored canonical syntax colors in Obsidian and scoped bold colors separately for dark and light modes.
+- Unified warm terminal/prose defaults and documented intentional surface and tokenizer differences.
+- Aligned the Oh My Pi interface foreground, backgrounds, and accent with the Kintsugi Flared Ghostty palette while retaining VS Code syntax colors.
+- Increased the contrast of Oh My Pi Markdown code-fence labels so language names and closing fences remain readable.
+
 ## [0.2.1] - 2026-04-24
 
 ### Changed

@@ -241,11 +241,11 @@ This project is a labor of love, and I’m excited to see how the community shap
 
 ## Flared Ports
 
-This fork also includes ports of **Kintsugi Dark Flared** for Neovim, opencode, Ghostty, LazyGit, and Obsidian.
+This fork also includes ports of **Kintsugi Dark Flared** for Neovim, opencode, Ghostty, Rex, LazyGit, Obsidian, and Oh My Pi.
 
-The screenshots above use the README's advanced polish settings, especially font weight and icon styling. The terminal/editor ports bias the palette warmer and brighter to match that look, but final contrast still depends on your terminal, font, and icon setup.
+The ports share the original Flared syntax colors and a common Markdown hierarchy. Terminal and prose surfaces retain warmer default text; editor surfaces retain the original defaults. See the [cross-app color contract](./palette/README.md) for intentional differences, parser limitations, and comparison fixtures. Final contrast still depends on your terminal, font, and icon setup.
 
-- **Neovim:** copy `ports/neovim/colors/kintsugi-flared.lua` into a directory on your `runtimepath`, then use `:colorscheme kintsugi-flared`.
+- **Neovim:** merge both `ports/neovim/colors` and `ports/neovim/after` into your Neovim configuration directory, then use `:colorscheme kintsugi-flared`. The `after/queries` extensions keep JavaScript/TypeScript declarations gold; copying only the colorscheme omits those overrides.
 - **LazyVim:** add this fork as a lazy.nvim plugin and set the LazyVim colorscheme to `kintsugi-flared`:
 
 ```lua
@@ -264,10 +264,16 @@ return {
 }
 ```
 
-- **opencode:** copy `.opencode/themes/kintsugi-flared.json` to `~/.config/opencode/themes/kintsugi-flared.json` or keep it in this project and select `kintsugi-flared` with `/theme`.
+- **opencode:** copy `.opencode/themes/kintsugi-flared.json` to `~/.config/opencode/themes/kintsugi-flared.json` or keep it in this project and select `kintsugi-flared` with `/themes`.
 - **Ghostty:** copy `ports/ghostty/kintsugi-flared` into your Ghostty themes directory and set `theme = kintsugi-flared`.
+- **[Rex](https://www.superlogical.com/rex) by Superlogical:** open **Settings > Themes**, click **Import** under **Import Theme**, and select [`ports/ghostty/kintsugi-flared`](./ports/ghostty/kintsugi-flared). Then select **kintsugi-flared** under **Dark Mode**. Rex imports Ghostty theme files directly, so both terminals share the same palette. You can also start the import with **Import Theme File** in Rex's command palette.
 - **LazyGit:** merge `ports/lazygit/kintsugi-flared.yml` into `~/Library/Application Support/lazygit/config.yml` on macOS or `~/.config/lazygit/config.yml` on Linux.
 - **Obsidian:** copy `ports/obsidian/kintsugi-flared` into `<vault>/.obsidian/themes/`, then select **Kintsugi Flared** in Obsidian's Appearance settings.
+- **Oh My Pi:** copy `ports/oh-my-pi/kintsugi-flared.json` to `~/.omp/agent/themes/kintsugi-flared.json`, then run `omp config set theme.dark kintsugi-flared` (or select it with `/theme`). The OMP interface uses the Kintsugi Flared Ghostty background (`#131314`), warm foreground (`#d4c7ad`), and cursor gold (`#d4a943`), while syntax highlighting follows the VS Code original within its available token categories. Select the `kintsugi-flared` theme in Ghostty for the closest match; OMP cannot change your terminal's background.
+
+To preview the OMP palette in your terminal, run `python3 ports/oh-my-pi/preview.py` from this repository. It shows color swatches and OMP's own composer, context-gauge, edit, and bash renderers in success/error and low/high context scenarios. The gallery uses a fixed theme accent; an actual session can have a different blue/purple/gold accent derived from its title.
+
+For a cross-port semantic preview, run `python3 scripts/preview-themes.py`. To update shared colors, edit `palette/flared.json`, run `python3 scripts/sync-themes.py`, and validate with `python3 -m unittest discover -s tests -v`. CI checks for drift and loads Neovim's actual highlight groups.
 
 ## Acknowledgements
 

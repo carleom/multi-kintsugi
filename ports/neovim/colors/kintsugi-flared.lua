@@ -16,7 +16,9 @@ local c = {
   border = "#2a2a28",
   fg = "#dddddd",
   fg_soft = "#c9c4b8",
+  fg_prose = "#d4c7ad",
   fg_muted = "#75715e",
+  fg_secondary = "#969b8c",
   syntax = "#BCAC8F",
   comment = "#5f5f5f",
   punctuation = "#7f7b66",
@@ -37,6 +39,15 @@ local c = {
   red = "#b38f8f",
   yellow = "#ebcb8b",
   magenta = "#b3a3d3",
+  black_bright = "#444444",
+  red_bright = "#d9a6a6",
+  green_bright = "#c3de9c",
+  yellow_bright = "#fbe4a8",
+  magenta_bright = "#d3a3d3",
+  cyan_bright = "#8ac6f2",
+  white_bright = "#ffffff",
+  selection = "#4a4030",
+  selection_inactive = "#2f2b24",
 }
 
 local function hi(group, opts)
@@ -75,7 +86,7 @@ hi("SpecialKey", { fg = c.comment })
 hi("Whitespace", { fg = "#30302e" })
 
 hi("Comment", { fg = c.comment })
-hi("Constant", { fg = c.number })
+hi("Constant", { fg = c.symbol })
 hi("String", { fg = c.string })
 hi("Character", { fg = c.symbol })
 hi("Number", { fg = c.number })
@@ -144,6 +155,7 @@ hi("@keyword.operator", { fg = c.operator })
 hi("@keyword.repeat", { fg = c.keyword, bold = true })
 hi("@keyword.return", { fg = c.keyword, bold = true })
 hi("@keyword.storage", { fg = c.storage, bold = true })
+hi("@keyword.type", { fg = c.storage, bold = true })
 hi("@keyword.storage.javascript", { fg = c.storage, bold = true })
 hi("@keyword.storage.typescript", { fg = c.storage, bold = true })
 hi("@keyword.storage.tsx", { fg = c.storage, bold = true })
@@ -155,14 +167,14 @@ hi("@string", { fg = c.string })
 hi("@string.escape", { fg = c.symbol })
 hi("@number", { fg = c.number })
 hi("@boolean", { fg = c.number })
-hi("@constant", { fg = c.number })
+hi("@constant", { fg = c.symbol })
 hi("@constant.builtin", { fg = c.number })
 hi("@function", { fg = c.symbol })
 hi("@function.builtin", { fg = c.operator })
 hi("@function.call", { fg = c.symbol })
 hi("@function.method", { fg = c.symbol })
 hi("@function.method.call", { fg = c.symbol })
-hi("@constructor", { fg = c.storage, bold = true })
+hi("@constructor", { fg = c.symbol })
 hi("@variable", { fg = c.syntax })
 hi("@variable.builtin", { fg = c.storage, bold = true })
 hi("@variable.member", { fg = c.symbol })
@@ -182,8 +194,32 @@ hi("@tag.delimiter", { fg = c.punctuation })
 hi("@attribute", { fg = c.attribute })
 hi("@keyword.directive", { fg = c.keyword, bold = true })
 hi("@markup.heading", { fg = c.storage, bold = true })
+hi("@markup.heading.marker", { fg = c.symbol })
+hi("@markup.strong", { fg = c.storage, bold = true })
+hi("@markup.italic", { italic = true })
 hi("@markup.link", { fg = c.symbol })
+hi("@markup.link.label", { fg = c.symbol })
+hi("@markup.link.url", { fg = c.blue_bright, underline = true })
+hi("@markup.list", { fg = c.storage })
+hi("@markup.quote", { fg = c.fg_muted })
 hi("@markup.raw", { fg = c.string })
+hi("markdownH1", { fg = c.storage, bold = true })
+hi("markdownH2", { fg = c.storage, bold = true })
+hi("markdownH3", { fg = c.storage, bold = true })
+hi("markdownH4", { fg = c.storage, bold = true })
+hi("markdownH5", { fg = c.storage, bold = true })
+hi("markdownH6", { fg = c.storage, bold = true })
+hi("markdownHeadingDelimiter", { fg = c.symbol })
+hi("markdownBold", { fg = c.storage, bold = true })
+hi("markdownItalic", { italic = true })
+hi("markdownCode", { fg = c.string })
+hi("markdownCodeBlock", { fg = c.string })
+hi("markdownCodeDelimiter", { fg = c.symbol })
+hi("markdownLinkText", { fg = c.symbol })
+hi("markdownUrl", { fg = c.blue_bright, underline = true })
+hi("markdownListMarker", { fg = c.storage })
+hi("markdownOrderedListMarker", { fg = c.storage })
+hi("markdownBlockquote", { fg = c.fg_muted })
 
 hi("@lsp.type.class", { fg = c.symbol })
 hi("@lsp.type.enum", { fg = c.symbol })
@@ -230,11 +266,11 @@ vim.g.terminal_color_4 = c.blue
 vim.g.terminal_color_5 = c.magenta
 vim.g.terminal_color_6 = c.cyan
 vim.g.terminal_color_7 = c.fg
-vim.g.terminal_color_8 = "#444444"
-vim.g.terminal_color_9 = "#d9a6a6"
-vim.g.terminal_color_10 = "#c3de9c"
-vim.g.terminal_color_11 = "#fbe4a8"
+vim.g.terminal_color_8 = c.black_bright
+vim.g.terminal_color_9 = c.red_bright
+vim.g.terminal_color_10 = c.green_bright
+vim.g.terminal_color_11 = c.yellow_bright
 vim.g.terminal_color_12 = c.blue_bright
-vim.g.terminal_color_13 = "#d3a3d3"
-vim.g.terminal_color_14 = "#8ac6f2"
-vim.g.terminal_color_15 = "#ffffff"
+vim.g.terminal_color_13 = c.magenta_bright
+vim.g.terminal_color_14 = c.cyan_bright
+vim.g.terminal_color_15 = c.white_bright
